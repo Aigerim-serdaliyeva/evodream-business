@@ -5,7 +5,7 @@ $(document).ready(function () {
   var $html = $("html, body");
   var $header = $(".header");
   var $menu = $(".main-menu");
-  var headerHeight = 115;
+  var headerHeight = 116;
   var $hamburger = $(".hamburger");
 
   // забираем utm из адресной строки и пишем в sessionStorage, чтобы отправить их на сервер при form submit
@@ -157,6 +157,20 @@ $(document).ready(function () {
       }
     } else {
       e.preventDefault();
+    }
+  });
+
+  $("[data-remodal-info]").click(function() {
+    var target = $(this).data('remodal-target');
+    var json = $(this).data('remodal-info');
+
+    var $model = $('[data-remodal-id="' + target + '"]');
+    var info = json["info"];
+
+    for (var i = 0; i < info.length; i++) {
+      var prop = info[i]["prop"];
+      var val = info[i]["value"];
+      $model.find('[name="' + prop + '"]').val(val);
     }
   });
 

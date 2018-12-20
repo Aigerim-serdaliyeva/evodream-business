@@ -208,6 +208,18 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.Прямоугольник_2 {
+  background-color: rgb(198, 168, 117);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 614px;
+  top: 5944px;
+  width: 200px;
+  height: 41px;
+  z-index: 449;
+}
+
+
 .button {
   position: relative;
   display: inline-block;
@@ -240,14 +252,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+
 .input, .textarea {
   color: $text_color;
-  font-size: 14px;
+  font-size: 12px;
   line-height: inherit;
-  border: 1px solid $accent;
+  border: 1px solid #cecdcc;
   background-color: transparent;
   font-family: $default_family, sans-serif;
-  padding: 11px 20px 11px 35px;   
+  padding: 11.5px 10px 11.5px 20px;   
 
   &.error {
     border-color: red;
@@ -267,17 +280,17 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 	&::-webkit-input-placeholder {
-    color: #000;
+    color: #8d8d8c;
 		opacity: 1;
 	}
 	
 	&::-moz-placeholder {
-    color: #000;
+    color: #8d8d8c;
 		opacity: 1;
 	}
 	
 	&:-ms-input-placeholder {
-    color: #000;
+    color: #8d8d8c;
 		opacity: 1;
   }
   
@@ -359,10 +372,16 @@ h1, h2, h3, h4, h5, h6 {
         max-width: 260px;
         margin: 0 auto;    
       }
+
+      &__info {
+        color: #fffffe;
+        margin-bottom: 15px;
+      }
     }
 
     .button {
       width: 100%;
+      padding: 12.5px 25px;
     }
   }
 }
@@ -384,46 +403,7 @@ h1, h2, h3, h4, h5, h6 {
         width: auto;
         margin: 0 auto;
       }
-    }
-
-    &-nav {
-      display: flex;
-    }
-
-		&-prev, &-next {
-      display: block;
-			width: 45px;
-      height: 45px;
-      // background-image: url('../img/arrow-left.jpg') !important;
-      background-repeat: no-repeat !important;
-      background-position: center center !important;
-      background-size: 100% 100% !important;
-      // transform: translateY(-50%);
-      outline: 0;
-      z-index: 10;
-
-      &.disabled {
-        cursor: default;
-      }
-    }    
-        
-    &-prev {
-      margin-right: 10px;
-      background-image: url('../img/arrow-left.jpg') !important;
-  
-      &.disabled {
-        background-image: url('../img/arrow-left-disabled.jpg') !important;
-      }
-    }
-  
-    &-next {
-      background-image: url('../img/arrow-right.jpg') !important;
-      
-      &.disabled {
-        background-image: url('../img/arrow-right-disabled.jpg') !important;
-      }
-    }
-	
+    }	
 
     &-dots {
       position: relative;
@@ -445,6 +425,44 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+.owl {
+  &-nav {
+    display: flex;
+  }
+
+  &-prev, &-next {
+    display: block;
+    width: 45px;
+    height: 45px;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: 100% 100% !important;
+    outline: 0;
+    z-index: 10;
+
+    &.disabled {
+      cursor: default;
+    }
+  }    
+      
+  &-prev {
+    margin-right: 10px;
+    background-image: url('../img/arrow-left.jpg') !important;
+
+    &.disabled {
+      background-image: url('../img/arrow-left-disabled.jpg') !important;
+    }
+  }
+
+  &-next {
+    background-image: url('../img/arrow-right.jpg') !important;
+    
+    &.disabled {
+      background-image: url('../img/arrow-right-disabled.jpg') !important;
+    }
+  }
+}
+
 .remodal {
   text-align: left;
   color: $text_color;
@@ -455,6 +473,11 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
     color: $text_color;
     z-index: 20;
+    &--white {
+      &, &:hover {
+        color: #fff;
+      }
+    }
 
     &:before {
       font-size: 35px;
@@ -462,7 +485,19 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   &--small {
-    max-width: 400px;
-    padding: 60px 25px;
+    max-width: 260px;
+    padding: 45px 40px;
+    background-image: url("../img/form-back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
+
+  &__title {
+    font-family: $title_family, serif;
+    color: $accent;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
 }

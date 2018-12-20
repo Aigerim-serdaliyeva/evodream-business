@@ -250,6 +250,32 @@
         display: block;
       }
     }
+
+    &-contact {
+      .contact {
+        &__content {
+          display: block;
+          margin: 0;
+        }
+        &__phone {
+          margin-bottom: 15px;
+        }
+        &__address {
+          font-size: 13.5px;
+        }
+      }
+    }
+
+    &-thanks {
+      &__content {
+        margin-left: 0;
+      }
+      .container {
+        &::before {
+          display: none;
+        }
+      }
+    }
   }
 }
 
@@ -261,6 +287,10 @@
 
   .call-me {
     display: flex;
+  }
+
+  .remodal {
+    padding: 25px 10px;
   }
 
   .s-kurs {
@@ -347,6 +377,26 @@
         font-size: 16px;
         margin-bottom: 40px;
       }
+    }
+  }
+
+  .dostup {
+    &__title {
+      letter-spacing: -0.2px;
+    }
+  }
+
+  .day {
+    .remodal-close--white {
+      color: #1a1a1a;
+    }
+
+    &__content {
+      display: block;
+    }
+    &__form {
+      max-width: none;
+      padding: 10px;
     }
   }
 }

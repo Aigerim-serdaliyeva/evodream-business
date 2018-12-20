@@ -82,6 +82,7 @@
     text-align: center;
     text-decoration: underline;
     margin-top: 30px;
+    cursor: pointer;
   }
 
   .button {
@@ -355,7 +356,7 @@
   }
 
   &__block {
-    padding: 20px;
+    padding: 20px 18px;
     background-color: #1a1a1a;
     max-width: 240px;
     position: absolute;
@@ -373,7 +374,7 @@
   &__summary {
     color: #d7c29e;
     font-size: 12px;
-    letter-spacing: -0.1px;
+    letter-spacing: -0.3px;
     font-style: italic;
   }
 }
@@ -732,27 +733,199 @@
   }
 }
 
-.s-thanks {
-  padding: 200px 0 100px 0;
-  flex-grow: 1;
-    
+.politika {
+  max-width: 750px;
+
   &__title {
+    font-size: 20px;
+    font-family: $title_family, serif;
     color: $accent;
-    font-size: 48px;
-    font-weight: normal;
-    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
   }
 
   &__text {
-    font-size: 24px;
-    margin: 0 0 125px;
+    font-size: 12px;
+    margin-bottom: 15px;
+    span {
+      color: $accent;
+    }
+  }
+}
+
+.dostup {
+  max-width: 452px;
+  background-color: #1a1a1a;
+  padding: 45px 25px 30px;
+
+  &__title {
+    font-weight: bold;
+    text-align: center;
+    font-family: $title_family, serif;
+    margin-bottom: 20px;
+    color: $accent;
+  }
+
+  ul {
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    li {
+      list-style: none;
+    }
+  }
+}
+
+.day {
+  max-width: 752px;
+  padding: 0;
+
+  &__content {
+    display: flex;
+  }
+
+  &__block {
+    max-width: 490px;
+    width: 100%;
+    padding: 70px 25px 25px;
+  }
+
+
+  &__form {
+    max-width: 262px;
+    width: 100%;
+    background-image: url("../img/program-form-back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .form {
+      &__content {
+        max-width: 200px;
+      }
+    }
+  }
+
+  &__num {
+    background-color: $accent;
+    box-shadow: 0px 4px 4px 0px rgba(51, 44, 32, 0.3);
+    padding: 8px 12px;
+    display: inline-block;
+    font-size: 12px;
+    font-family: RobotoSlab, serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .num {
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: -5px;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-family: $title_family, serif;
+    color: $accent;
+    margin-bottom: 8px;
+  }
+
+  ul {
+    padding: 0;
+    margin: 10px 0 0;
+
+    li {
+      list-style: none;
+      margin-bottom: 15px;
+      font-size: 12px;
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+
+    .accent {
+      font-weight: 500;
+      word-wrap: break-word;
+      width: calc(50% - 50px);
+      color: #1a1a1a;
+
+      &:first-child {
+        text-align: right;
+      }
+    }
+
+    .owl {
+      &-nav {
+        margin: 0 10px;
+      }
+
+      &-prev, &-next {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+.s-thanks {
+  padding: 200px 0 100px 0;
+  flex-grow: 1;
+  background-image: url("../img/thanks-back.jpg");
+  position: relative;
+  z-index: 1;
+
+  &__content {
+    margin-left: 68px;
+  }
+
+  .container {
+    &::before {
+      content: "";
+      width: 360px;
+      background-color: #1a1a1a;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+  }
+    
+  &__title {
+    color: $accent;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: $title_family, serif;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  &__text {
+    font-size: 21px;
+    color: #fff;
+    font-family: $title_family, serif;
+    font-weight: bold;
+    margin: 0 0 130px;
   }
 
   &__link {
     text-decoration: underline;
-    color: $accent;
+    color: #ffffff;
   }
 }
+
 
 
 @import './_media';
