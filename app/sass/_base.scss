@@ -260,7 +260,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid #cecdcc;
   background-color: transparent;
   font-family: $default_family, sans-serif;
-  padding: 11.5px 10px 11.5px 20px;   
+  padding: 11.5px 20px 11.5px 20px;   
 
   &.error {
     border-color: red;
@@ -275,7 +275,7 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
     text-align: left;
     color: red;
-    padding-left: 35px;
+    padding-left: 20px;
     margin-top: 5px;
 	}
 
