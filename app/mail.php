@@ -4,9 +4,9 @@ if(isset($_POST["info"])) {
 
   $method = $_SERVER['REQUEST_METHOD'];
 
-  $project_name = "";
-  $admin_email  = "info@.kz, client@marketing-time.kz";
-  $server_mail = "<info@.kz>";
+  $project_name = "Evodream Business";
+  $admin_email  = "info@evodreammarketing.com, client@marketing-time.kz";
+  $server_mail = "<info@evodreammarketing.com>";
   $form_subject = "Заявка";
 
 
@@ -42,6 +42,6 @@ if(isset($_POST["info"])) {
 
   mail($admin_email, adopt($form_subject), $message, $headers);
 
-  header("Location: /thanks.html");
+  header("Location: /course/thanks.html");
   
 } 
