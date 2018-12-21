@@ -237,6 +237,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 
   &:hover {
+    background-color:darken($accent, 10%);
   }    
 
   &:active {
@@ -500,4 +501,88 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 20px;
   }
 
+}
+
+/* Custom checkbox */
+.label {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  
+  .checkbox {
+    margin-right: 10px;
+  }
+}
+
+.checkbox {
+  display: inline-block;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  padding: 2px;
+  border: 1px solid #fff;
+  flex-shrink: 0;
+
+  [type="checkbox"], [type="radio"] {
+    display: none;
+
+    & + span {
+      display: none;
+    }
+
+    &:checked + span {
+      display: block;
+    }
+  }
+
+  [type="radio"] + span {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+  }
+
+  [type="checkbox"] + span {
+    position: absolute;
+    top: -2px;
+    left: 3px;
+    width: 15px;
+    height: 11px;
+    background-size: cover;
+    background-image: url('../img/checkbox.png');
+  }
+
+}
+/* End Custom checkbox */
+
+.question {
+  
+  &__error {
+    display: none;
+    margin: 10px 0;
+    color: red;
+    text-align: center;
+  }
+
+  &.has-error {
+    .question__error {
+      display: block;
+    }
+  }
+}
+
+.ukazat {
+  outline: none;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid #fff;
+  padding: 0 15px 3px;
+  width: 100%;
+  max-width: 216px;
+  background-color: transparent;
+
+  &::placeholder {
+    font-size: 12px;
+    font-style: italic;
+  }
 }

@@ -928,6 +928,46 @@
   }
 }
 
+.question-modal {
+  max-width: 360px;
+  padding: 60px 30px 30px;
+  background-color: #1a1a1a;
 
+  .question {
+    &__num {
+      color: $accent;
+      font-family: $title_family;
+      margin-bottom: 20px;
+      span {
+        color: #fff;
+      }
+    }
+    &__text {
+      font-size: 18px;
+      font-weight: 900;
+      font-family: $title_family;
+      color: $accent;
+      margin-bottom: 18px;
+    }
+    &__subtext {
+      font-size: 12px;
+      font-style: italic;
+      color: $accent;
+      margin: -12px 0 20px;
+    }
+    &__variants {
+      color: #fff;
+      margin-bottom: 25px;
+    }
+    .label {
+      margin-bottom: 10px;
+    }
+    .perehod {
+      display: block;
+      max-width: 180px;
+      margin: 0 0 0 auto;
+    }
+  }
+}
 
 @import './_media';

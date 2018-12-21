@@ -103,7 +103,7 @@
         <div class="question">
           <div class="question__title">Пройдите тест и узнайте, какие инструменты для развития бизнеса подходят именно Вам</div>
 
-          <button class="button">Пройти тест</button>
+          <a href="#question-modal" class="button">Пройти тест</a>
           <div class="question__podarok">+ подарок на почту</div>
           <div class="question__instrument">“Чек-лист с 7 актуальными 
               инструментами для привлечения
@@ -641,7 +641,7 @@
       <div class="container">
         <div class="question__title">Пройдите тест и узнайте, какие инструменты для развития бизнеса подходят именно Вам</div>
         <div class="row justify-content-center align-items-center">
-          <div class="col-lg-3"><button class="button">Пройти тест</button></div>
+          <div class="col-lg-3"><a href="#question-modal" class="button">Пройти тест</a></div>
           <div class="col-lg-9">
             <div class="question">
               <div class="question__podarok">+ подарок на почту</div>
@@ -1308,6 +1308,314 @@
       </div>
     </div>
     
+  </div>
+
+  <div class="remodal question-modal inverse" data-remodal-id="question-modal" data-remodal-options="hashTracking: true">
+    <button data-remodal-action="close" class="remodal-close remodal-close--white"></button>
+    <form action="/mail.php" method="post">
+      <input type="hidden" name="info" value="Quiz">
+  
+      <div class="question" id="question-1">
+        <div class="question__num">Вопрос <span>1</span> из 4</div>
+        <div class="question__text">Ваша сфера деятельности:</div>
+        <input type="hidden" name="Вопрос1" value="Ваша сфера деятельности:">
+        <div class="question__variants">
+          <label class="label">
+            <span class="checkbox">
+              <input type="radio" name="Ответ1" value="Наемный работник в компании">
+              <span></span>           
+            </span>
+            <span>Наемный работник в компании</span>
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="radio" name="Ответ1" value="Занимаю руководящую должность в компании">
+              <span></span>
+            </span>
+            <span>Занимаю руководящую должность в компании</span>
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="radio" name="Ответ1" value="Начинающий предприниматель">
+              <span></span>
+            </span>
+            <span>Начинающий предприниматель</span>
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="radio" name="Ответ1" value="Есть свой бизнес">
+              <span></span>
+            </span>
+            <span>Есть свой бизнес</span>
+          </label>
+        </div>
+        <div class="question__error"></div>
+        <a href="#" class="perehod button" data-show="question-1-2" data-hide="question-1">Следующий вопрос</a>
+      </div>
+
+      <div class="question d-none" id="question-1-2">
+        <div class="question__num">Вопрос <span>1.2</span> из 4</div>
+        <div class="question__text">Планируете ли Вы начать свой собственный бизнес?</div>
+        <input type="hidden" name="Вопрос1_2" value="Планируете ли Вы начать свой собственный бизнес?">
+        <div class="question__variants">
+          <label class="label">
+            <span class="checkbox">
+              <input type="radio" name="Ответ1_2" value="Да">
+              <span></span>
+            </span>
+            <span>Да</span>
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="radio" name="Ответ1_2" value="Нет, планирую работать над развитием компании, в которой сейчас работаю">
+              <span></span>
+            </span>
+            <span>Нет, планирую работать над развитием компании, в которой сейчас работаю</span>
+          </label>
+        </div>
+        <div class="question__error"></div>
+        <a href="#" class="perehod button" data-show="question-2" data-hide="question-1-2">Следующий вопрос</a>
+      </div>
+
+      <div class="question d-none" id="question-2">
+        <div class="question__num">Вопрос <span>2</span> из 4</div>
+        <div class="question__text">Укажите нишу, развитие которой Вас интересует:</div>
+        <input type="hidden" name="Вопрос2" value="Укажите нишу, развитие которой Вас интересует:">
+        <div class="question__variants">
+          <label class="label">
+            <span class="checkbox">
+              <input type="radio" name="Ответ2" value="Продажа товаров">
+              <span></span>           
+            </span>
+            <span>Продажа товаров</span>
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="radio" name="Ответ2" value="Услуги населению">
+              <span></span>           
+            </span>
+            <span>Услуги населению</span>
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="radio" name="Ответ2" value="Строительство и ремонт">
+              <span></span>           
+            </span>
+            <span>Строительство и ремонт</span>
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="radio" name="Ответ2" value="Оптовые продажи">
+              <span></span>           
+            </span>
+            <span>Оптовые продажи</span>
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="radio" name="Ответ2" value="Услуги для бизнеса">
+              <span></span>
+            </span>
+            <span>Услуги для бизнеса</span>
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="radio" name="Ответ2" value="Развлекательные услуги">
+              <span></span>           
+            </span>
+            <span>Развлекательные услуги</span>
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="radio" name="Ответ2" value="Другое" class="drugoe">
+              <span></span>
+            </span>
+            <span>Другое</span>
+            <input type="text" name="Ответ2_текст" placeholder="указать*" class="ukazat">
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="radio" name="Ответ2" value="Не знаю, хотел (-а) бы получить совет">
+              <span></span>
+            </span>
+            <span>Не знаю, хотел (-а) бы получить совет</span>
+          </label>
+        </div>
+        <div class="question__error"></div>
+        <a href="#" class="perehod button" data-show="question-3" data-hide="question-2">Следующий вопрос</a>
+      </div>
+
+      <div class="question d-none" id="question-3">
+        <div class="question__num">Вопрос <span>3</span> из 4</div>
+        <div class="question__text">Какие способы привлечения клиентов Вы используете?</div>
+        <div class="question__subtext">(можно указать один или несколько вариантов)</div>
+        <input type="hidden" name="Вопрос3" value="Какие способы привлечения клиентов Вы используете?">
+        <div class="question__variants">
+          <label class="label">
+            <span class="checkbox">
+              <input type="checkbox" name="Ответ3" value="Контекстная реклама">
+              <span></span>           
+            </span>
+            <span>Контекстная реклама</span>
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="checkbox" name="Ответ3" value="Таргетированная реклама">
+              <span></span>           
+            </span>
+            <span>Таргетированная реклама</span>
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="checkbox" name="Ответ3" value="Реклама в социальных сетях">
+              <span></span>           
+            </span>
+            <span>Реклама в социальных сетях</span>
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="checkbox" name="Ответ3" value="Реклама на TV">
+              <span></span>           
+            </span>
+            <span>Реклама на TV</span>
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="checkbox" name="Ответ3" value="Реклама на радио">
+              <span></span>           
+            </span>
+            <span>Реклама на радио</span>
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="checkbox" name="Ответ3" value="Баннерная реклама по городу">
+              <span></span>           
+            </span>
+            <span>Баннерная реклама по городу</span>
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="checkbox" name="Ответ3" value="Промоакции, раздача листовок">
+              <span></span>           
+            </span>
+            <span>Промоакции, раздача листовок</span>
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="checkbox" name="Ответ3" value='"Холодные" звонки'>
+              <span></span>           
+            </span>
+            <span>"Холодные" звонки</span>
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="checkbox" name="Ответ3" value="Через знакомых">
+              <span></span>           
+            </span>
+            <span>Через знакомых</span>
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="checkbox" name="Ответ3" value="Другое" class="drugoe">
+              <span></span>
+            </span>
+            <span>Другое</span>
+            <input type="text" name="Ответ3_текст" placeholder="указать*" class="ukazat">
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="checkbox" name="Ответ3" value="Не использую">
+              <span></span>
+            </span>
+            <span>Не использую</span>
+          </label>
+        </div>
+        <div class="question__error"></div>
+        <a href="#" class="perehod button" data-show="question-4" data-hide="question-3">Следующий вопрос</a>
+      </div>
+
+      <div class="question d-none" id="question-4">
+        <div class="question__num">Вопрос <span>4</span> из 4</div>
+        <div class="question__text">Что, по Вашему мнению, зачастую становится преградой для достижения Ваших целей?</div>
+        <div class="question__subtext">(можно указать один или несколько вариантов)</div>
+        <input type="hidden" name="Вопрос4" value="Что, по Вашему мнению, зачастую становится преградой для достижения Ваших целей?">
+        <div class="question__variants">
+          <label class="label">
+            <span class="checkbox">
+              <input type="checkbox" name="Ответ4" value="Неумение правильно ставить цели">
+              <span></span>           
+            </span>
+            <span>Неумение правильно ставить цели</span>
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="checkbox" name="Ответ4" value="Недостаток времени">
+              <span></span>           
+            </span>
+            <span>Недостаток времени</span>
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="checkbox" name="Ответ4" value="Отсутствие связей">
+              <span></span>
+            </span>
+            <span>Отсутствие связей</span>
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="checkbox" name="Ответ4" value="Нехватка денег">
+              <span></span>           
+            </span>
+            <span>Нехватка денег</span>
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="checkbox" name="Ответ4" value="Недостаточная мотивация">
+              <span></span>           
+            </span>
+            <span>Недостаточная мотивация</span>
+          </label>
+          <label class="label">
+            <span class="checkbox">
+              <input type="checkbox" name="Ответ4" value="Другое" class="drugoe">
+              <span></span>
+            </span>
+            <span>Другое</span>
+            <input type="text" name="Ответ4_текст" placeholder="указать*" class="ukazat">
+          </label>
+        </div>
+        <div class="question__error"></div>
+        <a href="#" class="perehod button" data-show="question-last" data-hide="question-4">Завершить</a>
+      </div>
+  
+      <div class="question d-none" id="question-last">
+        <div class="question__text text-center">
+          Чтобы узнать результат
+          <span class="break">и получить подарок,</span> 
+          введите контактные данные
+        </div>
+        <div class="form form--vertical">
+          <div class="form__content">
+            <div class="input-div">
+              <input type="text" class="input" name="name" placeholder="Введите имя" required>
+              <span class="error-message">Заполните поле</span>
+            </div>
+            <div class="input-div">
+              <input type="tel" class="input" name="phone" placeholder="Введите телефон*" required>
+              <span class="error-message">Заполните поле</span>
+            </div>
+            <div class="input-div">
+              <input type="email" class="input" name="email" placeholder="Введите e-mail*" required>
+              <span class="error-message">Заполните поле</span>
+            </div>
+            <div class="form__info">
+              * Ваши данные в безопасности и не будут переданы третьим лицам
+            </div>
+            <button type="submit" class="button ajax-submit">Узнать результат</button>
+          </div>          
+        </div>
+      </div>
+  
+    </form>    
   </div>
 
   <script src="./js/libs.min.js"></script>
