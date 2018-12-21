@@ -22,12 +22,16 @@
     .carousel-reviews {
       .owl {
         &-nav {
-          position: absolute;
-          // bottom: -20px;
-          
-          right: 50%;
-          transform: translateX(50%);
+          position: static;
+          justify-content: center;
         }
+      }
+    }
+    .review {
+      max-width: 100%;
+      &__block {
+        padding-left: 200px;
+        max-width: 825px;
       }
     }
   }
@@ -97,6 +101,31 @@
       }
       ul {
         margin-left: 0;
+      }
+    }
+  }
+
+  .s-reviews {
+    .carousel-reviews {
+      .owl {
+        &-item {
+          padding: 45px 10px 15px 10px;
+        }
+      }
+    }
+    .review {
+      flex-direction: column;
+      background-color: #1a1a1a;
+      &__img {
+        position: static;
+        margin-top: -45px;        
+        align-self: center;
+      }
+      &__block {
+        padding-left: 20px;
+      }
+      &__name, &__summary {
+        text-align: center;
       }
     }
   }
