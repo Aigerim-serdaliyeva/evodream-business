@@ -314,8 +314,12 @@
     display: inline;
   }
 
-  .call-me {
-    display: flex;
+  .callback__wrapper {
+    display: block !important; 
+  }
+
+  .page-top {
+    bottom: 80px;
   }
 
   .remodal {
