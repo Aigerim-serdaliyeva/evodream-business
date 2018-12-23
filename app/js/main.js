@@ -87,6 +87,16 @@ $(document).ready(function () {
     }
   });
 
+  $(".uznat-stoimost").click(function() {
+    var $href = $(this).attr('href');
+    console.log('href', $href);
+    setTimeout(function() {
+      window.location = $href;
+      var top = $($href).offset().top - headerHeight;
+      $html.stop().animate({ scrollTop: top }, "slow", "swing");
+    }, 100);
+  });
+
   $top.click(function () {
     $html.stop().animate({ scrollTop: 0 }, 'slow', 'swing');
   });
