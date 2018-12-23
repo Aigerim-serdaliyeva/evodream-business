@@ -359,6 +359,7 @@
     padding: 20px 18px;
     background-color: #1a1a1a;
     max-width: 240px;
+    width: 100%;
     position: absolute;
     bottom: 0;
   }
@@ -438,6 +439,25 @@
     
     .button {
       align-self: flex-start;
+    }
+
+    &__content {
+      display: none;
+      .program {
+        padding: 0;
+        max-width: none;
+        display: block;
+        &__day {
+          position: relative;
+          z-index: 1;
+          padding: 10px;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        &__block {
+          min-height: auto;
+        }
+      }
     }
   }
 

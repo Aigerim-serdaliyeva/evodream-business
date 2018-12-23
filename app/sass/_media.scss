@@ -279,6 +279,11 @@
       .carousel-program {
         display: block;
       }
+      .program {
+        &__content {
+          display: block;
+        }
+      }
     }
 
     &-contact {
