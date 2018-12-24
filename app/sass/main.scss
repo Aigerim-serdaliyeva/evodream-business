@@ -442,20 +442,73 @@
     }
 
     &__content {
-      display: none;
-      .program {
-        padding: 0;
-        max-width: none;
-        display: block;
-        &__day {
-          position: relative;
-          z-index: 1;
-          padding: 10px;
-          text-align: center;
+      .day {
+
+        &__blog {
           margin-bottom: 20px;
         }
+        
+        &__button {
+          font-size: 16px;
+          font-weight: bold;
+          padding: 10px 40px;
+          background-color: #1a1a1a;
+          color: $accent;
+          position: relative;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          span {
+            font-size: 14px;
+            font-weight: 500;
+            text-align: right;
+            display: block;
+          }
+          span.skryt {
+            display: none;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            background-image: url("../img/arrow-bottom-min.jpg");
+            top: 50%;
+            transform: translateY(-50%);
+            right: 8px;
+            width: 30px;
+            height: 30px;
+            background-repeat: no-repeat;
+            background-position: center center;                        
+          }
+        }
+        &__blog.active {
+          .day__button {
+            span.posmotret {
+              display: none;
+            }
+            span.skryt {
+              display: block;
+            }
+            &::after {
+              background-image: url("../img/arrow-top-min.jpg");
+            }
+          }
+        }
+
         &__block {
-          min-height: auto;
+          max-width: none;
+          padding: 20px;
+        }
+
+        &__form {
+          max-width: none;
+          padding: 15px;
+          .form {
+            &__content {
+              max-width: none;
+              width: 100%;
+            }
+          }
         }
       }
     }

@@ -312,6 +312,12 @@
       }
     }
   }
+
+  .day {
+    &__content {
+      display: block;
+    }
+  }
 }
 
 // ≥576px
@@ -429,10 +435,7 @@
     .remodal-close--white {
       color: #1a1a1a;
     }
-
-    &__content {
-      display: block;
-    }
+    
     &__form {
       max-width: none;
       padding: 10px;

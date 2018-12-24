@@ -246,6 +246,11 @@ $(document).ready(function () {
     }
   });
 
+  $(".day__button").click( function() {
+    $(this).parent().toggleClass("active");
+    $(this).next().slideToggle();
+  });
+
   $(".carousel-program").owlCarousel({
     loop: false,
     dots: false,
